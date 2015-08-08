@@ -39,8 +39,10 @@ def main(digits, goal_permutation):
 			print "counter: ", counter
 		delta = math.factorial(n-1) #okning per tall i gitt posisjon
 		if debug: print "delta: ", delta 
+
 		permutations = (goal_permutation - current_permutation) / delta	
 		if debug: print "permutations: ", permutations
+		
 		digits = update_list(digits, counter, permutations)
 		if debug: print "updated digits: ", digits
 
